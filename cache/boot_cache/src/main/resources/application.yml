@@ -4,12 +4,23 @@ server:
   compression:
     enabled: true
   connection-timeout: 3000
+logging:
+    level:
+      root: info
+      org.springframework.security: warn
+      com.enjoy.dao: debug
+    # 默认日志文件名
+    # file: log
+    # 默认日志路径
+    # path: ./log
+    # logback.xml路径，默认为classpath:logback.xml
+    # config: ./logback.xml
 spring:
   redis:
-      host: 127.0.0.1
+      host: 192.168.100.166
       port: 6379
   datasource:
-      url: jdbc:mysql://192.168.99.100:3306/enjoy?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://192.168.100.166:3306/enjoy?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
       username: root
       password: root
       driverClassName : com.mysql.jdbc.Driver

@@ -27,8 +27,8 @@ public class Swagger2 {
     }
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Peter的程序")
-                .contact("Peter")
+                .title("姜颖的程序")
+                .contact("jiangying")
                 .version("1.0")
                 .build();
     }

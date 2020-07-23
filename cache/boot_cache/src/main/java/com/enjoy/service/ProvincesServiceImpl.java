@@ -4,6 +4,7 @@ import com.enjoy.dao.CitiesDao;
 import com.enjoy.dao.ProvincesDao;
 import com.enjoy.entity.Provinces;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
