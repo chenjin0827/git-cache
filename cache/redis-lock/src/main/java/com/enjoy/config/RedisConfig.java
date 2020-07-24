@@ -19,7 +19,7 @@ public class RedisConfig {
     @Bean
     public JedisConnectionFactory jedisConnectionFactory(JedisPoolConfig jedisPoolConfig)  {
         JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
-        jedisConnectionFactory.setHostName("127.0.0.1");
+        jedisConnectionFactory.setHostName("192.168.100.166");
         jedisConnectionFactory.setPort(6379);
         jedisConnectionFactory.setUsePool(true);
         jedisConnectionFactory.setPoolConfig(jedisPoolConfig);

@@ -17,6 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ *事务可以理解为一个副本   对应转正（commit），丢弃（rollback）
+ 1、启动事务（启动副本），
+ 2、副本转正
+ 3、副本丢弃
+ */
 @Api(value = "事务示例", description = "事务示例")
 @RestController
 public class TransController {

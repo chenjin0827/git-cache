@@ -17,7 +17,7 @@ public class DataSourceConfig {
     @Bean
     public DataSource dataSource() throws PropertyVetoException {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
-        dataSource.setJdbcUrl("jdbc:mysql://192.168.99.100:3306/enjoy?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull");
+        dataSource.setJdbcUrl("jdbc:mysql://192.168.100.166:3306/enjoy?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull");
         dataSource.setDriverClass("com.mysql.jdbc.Driver");
         dataSource.setUser("root");
         dataSource.setPassword("root");

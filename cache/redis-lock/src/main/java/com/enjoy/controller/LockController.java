@@ -16,8 +16,8 @@ public class LockController {
     private static long count = 20;//黄牛
     private CountDownLatch countDownLatch = new CountDownLatch(5);
 
-    @Resource(name="redisLock")
-//    @Resource(name="mysqlLock")
+//    @Resource(name="redisLock")
+    @Resource(name="mysqlLock")
     private Lock lock;
 
 	@ApiOperation(value="售票")

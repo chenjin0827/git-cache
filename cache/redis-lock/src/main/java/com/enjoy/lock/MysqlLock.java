@@ -25,7 +25,9 @@ public class MysqlLock implements Lock {
 		}
 		//2.加锁失败，当前任务休眠一段时间
 		try {
-			Thread.sleep(10);
+//			此处超时时间设置长点，不然递归调用会出问题（内存溢出）
+			System.out.println(Thread.currentThread().getName()+"加锁失败"+",2秒后重新尝试！");
+			Thread.sleep(50);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -41,6 +43,7 @@ public class MysqlLock implements Lock {
 		try {
 			String sql = "insert into db_lock (id) values (?)";
 			jdbcTemplate.update(sql,ID_NUM); //一条sql语句，是个原子性操作
+			System.out.println(Thread.currentThread().getName()+"mysql成功加锁===");
 //			mapper.insert(ID_NUM);
 		} catch (Exception e) {
 			return false;

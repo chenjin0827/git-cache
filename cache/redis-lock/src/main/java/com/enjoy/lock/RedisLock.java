@@ -78,7 +78,7 @@ public class RedisLock implements Lock {
 		if (null != uuid && uuid.equals(local.get())){//现在锁还是自己的
 			//锁失效了
 
-			//删锁
+			//删锁   此时删除的锁是可能人家的，因为自己的锁早已失效
 			jedis.del(KEY);
 		}
 	}
