@@ -5,6 +5,7 @@ import com.enjoy.dao.ProvincesDao;
 import com.enjoy.entity.Provinces;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.*;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class ProvincesServiceImpl2 implements ProvincesService{
      */
 //    @Cacheable(value = "province",
 //            key = "#root.targetClass.simpleName+':'+#root.methodName+':'+#provinceid")
-    @Cacheable// value指定当前接口，要使用哪一个缓存器 --- 如果该缓存器不存在，则创建一个
+    @Cacheable(value = "province")// value指定当前接口，要使用哪一个缓存器 --- 如果该缓存器不存在，则创建一个
     public Provinces detail(String provinceid) {//一个接口方法，对应一个缓存器
         Provinces provinces = null;
 

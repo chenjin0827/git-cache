@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 编码实现redis缓存
  */
-@Service("provincesService")
+//@Service("provincesService")
 public class ProvincesServiceImpl1 extends ProvincesServiceImpl implements ProvincesService{
 
     @Autowired
