@@ -1,16 +1,16 @@
 server:
   port: 8090
-spring:
+
 #  profiles:
 #    active:
 #      - test
-
+spring:
   datasource:
     type: com.alibaba.druid.pool.xa.DruidXADataSource
     druid:
       ghDB:
         name: ghDB
-        url: jdbc:mysql://192.168.99.100:3306/enjoy?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://192.168.100.166:3306/enjoy?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
         password: root
         # 下面为连接池的补充设置，应用到上面所有数据源中
@@ -41,7 +41,7 @@ spring:
       nhDB:
         name: nhDB
         
-        url: jdbc:mysql://192.168.99.100:3306/enjoy2?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://192.168.100.166:3306/enjoy2?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
         password: root
         # 下面为连接池的补充设置，应用到上面所有数据源中
@@ -70,7 +70,7 @@ spring:
         useGlobalDataSourceStat: true 
       
   #jta相关参数配置   
-  jta:
+jta:
     log-dir: classpath:tx-logs
     transaction-manager-id: txManager
   

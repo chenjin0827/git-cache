@@ -31,6 +31,7 @@ public class GHServiceImpl implements GHService{
         if (ret != 1){
             throw new RuntimeException("下单失败，国航无票可订");
         }
+        //国航做完自己的业务之后调用一下另一个南航的接口进行try
         nhService.doOrder(busId,idcard);
         return ret;
     }

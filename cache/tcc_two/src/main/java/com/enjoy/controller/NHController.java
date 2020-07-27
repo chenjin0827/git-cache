@@ -24,7 +24,8 @@ public class NHController {
     public String doOrder(@ApiParam(value = "身份证号", required = true) @RequestParam("idcard") String idcard){
         try {
             String busId = UUID.randomUUID().toString();
-            nhService.doOrder(busId,idcard);
+            int i = nhService.doOrder(busId, idcard);
+            System.out.println(i);
             return "doOrder successfully";
         } catch (Exception e) {
             logger.error("下单失败",e);
