@@ -12,7 +12,9 @@ public class EnjoySimpleJob implements SimpleJob {
 	private EnjoyBusiness enjoyBusiness;
 
 	public void execute(ShardingContext context) {
-		System.out.println("当前分片："+context.getShardingParameter());
+		String shardingParameter = context.getShardingParameter();
+		System.out.println("当前分片参数："+
+				shardingParameter);
 		int total = context.getShardingTotalCount();
 		int shardingItem = context.getShardingItem();
 
