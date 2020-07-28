@@ -47,7 +47,7 @@ public class CasFilter implements Filter {
             String ticket = request.getParameter("ticket");
             if (null == ticket || null == redisTemplate.opsForValue().get(ticket)){
                 HttpServletResponse response = (HttpServletResponse)servletResponse;
-                response.sendRedirect("http://cas.com:8090/toLogin?url="+request.getRequestURL().toString());
+                response.sendRedirect("http://cas.com:8080/toLogin?url="+request.getRequestURL().toString());
                 return ;
             }
 
